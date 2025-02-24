@@ -3964,6 +3964,9 @@ h4 span {
 }
 
 .teachers__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 84px;
+          flex: 0 0 84px;
   min-width: 84px;
   height: 84px;
   margin: 0px 16px 0px 0px;
@@ -4058,6 +4061,9 @@ h4 span {
 }
 
 .reviews__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
   min-width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -6879,6 +6885,9 @@ p.strong {
   }
 
   .teachers__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 54px;
+            flex: 0 0 54px;
     min-width: 54px;
     height: 54px;
   }
@@ -6912,6 +6921,9 @@ p.strong {
 
   .reviews__image {
     margin: 0px 12px 0px 0px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 64px;
+            flex: 0 0 64px;
     min-width: 64px;
     height: 64px;
   }
