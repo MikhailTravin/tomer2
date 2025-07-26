@@ -1,0 +1,37 @@
+[data-showmore] {
+}
+[data-showmore-content] {
+}
+[data-showmore-buttons] {
+	&._hidden {
+		display: none;
+	}
+	span {
+		display: flex;
+		white-space: nowrap;
+		flex-wrap: nowrap;
+		flex-direction: row-reverse;
+		font-weight: 400;
+		font-size: 14px;
+		color: #3035c4;
+		&::before {
+			font-size: 8px;
+			color: #3035c4;
+			margin: 5.5px 0px 0px 10px;
+		}
+	}
+}
+
+[data-showmore-button] {
+	display: flex;
+	._showmore-active & {
+		display: none;
+	}
+}
+
+[data-collapse-button] {
+	display: none !important;
+	._showmore-active & {
+		display: flex !important;
+	}
+}
