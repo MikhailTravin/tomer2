@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Отзывы"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page videos">
+			<div class="main-reviews">
+				<div class="main-reviews__container">
+					<h1 class="title1">
+						<span>Отзывы</span> учеников
+					</h1>
+					<div class="main-reviews__selects">
+						<div class="main-reviews__select">
+							<div class="select__choice">Тип отзыва</div>
+							<select name="form[]" class="form">
+								<option value="1" selected>Все типы</option>
+								<option value="2" data-href="video-reviews.html">Видео отзывы</option>
+								<option value="3" data-href="text-reviews.html">Текстовые отзывы</option>
+								<option value="4" data-href="audio-reviews.html">Аудио отзывы</option>
+							</select>
+						</div>
+						<div class="main-reviews__select">
+							<div class="select__choice">Выберите раздел</div>
+							<select name="form[]" class="form select-section">
+								<option value="1" selected>Все отзывы</option>
+								<option value="2">Групповые занятия</option>
+								<option value="3">Курсы для начинающих</option>
+								<option value="4">Индивидуальные занятия</option>
+								<option value="5">Мастер -классы</option>
+								<option value="6">Вебинары</option>
+							</select>
+						</div>
+					</div>
+					<div class="main-reviews__body">
+						<div class="main-reviews__column">
+							<div class="reviews__title title">
+								<h5>Текстовые отзывы</h5>
+								<div class="reviews__arrows arrows">
+									<div class="reviews-prev arrow-prev _icon-arrow"></div>
+									<div class="reviews-next arrow-next _icon-arrow"></div>
+								</div>
+							</div>
+							<div class="reviews__content">
+								<div class="reviews__slider reviews-slider swiper">
+									<div class="reviews__wrapper swiper-wrapper">
+										<div data-category="2" class="reviews__slide slide-teachers swiper-slide">
+											<div class="reviews__item">
+												<div class="reviews__top">
+													<div class="reviews__image">
+														<img data-src="../img/photo/photo-1.png" alt="">
+													</div>
+													<div class="reviews__desc">
+														<div class="reviews__name">Анастасия Романовская</div>
+														<div class="reviews__subname">31.10.2024 на <a
+																href="#">Яндекс</a>
+														</div>
+													</div>
+												</div>
+												<div class="reviews__rating rating">
+													<div class="rating__body">
+														<div class="rating__line"></div>
+														<div class="rating__activeline"></div>
+														<div class="rating__stars">
+															<input type="radio" class="rating__star" value="1"
+																name="rating">
+															<input type="radio" class="rating__star" value="2"
+																name="rating">
+															<input type="radio" class="rating__star" value="3"
+																name="rating">
+															<input type="radio" class="rating__star" value="4"
+																name="rating">
+															<input type="radio" class="rating__star" value="5"
+																name="rating">
+														</div>
+														<input value="4.5" type="hidden" name="rating"
+															class="rating-input">
+													</div>
+												</div>
+												<div data-showmore class="reviews__showmore showmore">
+													<div data-showmore-content="105" class="reviews__showmore-content">
+														<p>
+															Очень полезный и интересный курс, вся информация четко
+															структурирована и разбита по блокам. Обратная связь и помощь
+															преподавателей очень помогла мне в работе с моей собакой.
+															Результат
+															занятий меня приятно Очень полезный и интересный курс, вся
+															информация четко
+														</p>
+													</div>
+													<button hidden data-showmore-button type="button"
+														class="reviews__more">
+														<span>Читать дальше</span>
+														<span>Скрыть</span>
+													</button>
+												</div>
+
+											</div>
+										</div>
+										<div data-category="3" class="reviews__slide slide-teachers swiper-slide">
+											<div class="reviews__item">
+												<div class="reviews__top">
+													<div class="reviews__image">
+														<img data-src="../img/photo/photo-2.png" alt="">
+													</div>
+													<div class="reviews__desc">
+														<div class="reviews__name">Виктор Ковалев</div>
+														<div class="reviews__subname">31.10.2024 на <a
+																href="#">Яндекс</a>
+														</div>
+													</div>
+												</div>
+												<div class="reviews__rating rating">
+													<div class="rating__body">
+														<div class="rating__line"></div>
+														<div class="rating__activeline"></div>
+														<div class="rating__stars">
+															<input type="radio" class="rating__star" value="1"
+																name="rating">
+															<input type="radio" class="rating__star" value="2"
+																name="rating">
+															<input type="radio" class="rating__star" value="3"
+																name="rating">
+															<input type="radio" class="rating__star" value="4"
+																name="rating">
+															<input type="radio" class="rating__star" value="5"
+																name="rating">
+														</div>
+														<input value="4.5" type="hidden" name="rating"
+															class="rating-input">
+													</div>
+												</div>
+												<div data-showmore class="reviews__showmore showmore">
+													<div data-showmore-content="105" class="reviews__showmore-content">
+														<p>
+															Очень полезный и интересный курс, вся информация четко
+															структурирована и разбита по блокам. Обратная связь и помощь
+															преподавателей очень помогла мне в работе с моей собакой.
+															Результат
+															занятий меня приятно Очень полезный и интересный курс, вся
+															информация четко
+														</p>
+													</div>
+													<button hidden data-showmore-button type="button"
+														class="reviews__more">
+														<span>Читать дальше</span>
+														<span>Скрыть</span>
+													</button>
+												</div>
+
+											</div>
+										</div>
+										<div data-category="4" class="reviews__slide slide-teachers swiper-slide">
+											<div class="reviews__item">
+												<div class="reviews__top">
+													<div class="reviews__image">
+														<img data-src="../img/photo/photo-2.png" alt="">
+													</div>
+													<div class="reviews__desc">
+														<div class="reviews__name">Виктор Ковалев</div>
+														<div class="reviews__subname">31.10.2024 на <a
+																href="#">Яндекс</a>
+														</div>
+													</div>
+												</div>
+												<div class="reviews__rating rating">
+													<div class="rating__body">
+														<div class="rating__line"></div>
+														<div class="rating__activeline"></div>
+														<div class="rating__stars">
+															<input type="radio" class="rating__star" value="1"
+																name="rating">
+															<input type="radio" class="rating__star" value="2"
+																name="rating">
+															<input type="radio" class="rating__star" value="3"
+																name="rating">
+															<input type="radio" class="rating__star" value="4"
+																name="rating">
+															<input type="radio" class="rating__star" value="5"
+																name="rating">
+														</div>
+														<input value="4.5" type="hidden" name="rating"
+															class="rating-input">
+													</div>
+												</div>
+												<div data-showmore class="reviews__showmore showmore">
+													<div data-showmore-content="105" class="reviews__showmore-content">
+														<p>
+															Очень полезный и интересный курс, вся информация четко
+															структурирована и разбита по блокам. Обратная связь и помощь
+															преподавателей очень помогла мне в работе с моей собакой.
+															Результат
+															занятий меня приятно Очень полезный и интересный курс, вся
+															информация четко
+														</p>
+													</div>
+													<button hidden data-showmore-button type="button"
+														class="reviews__more">
+														<span>Читать дальше</span>
+														<span>Скрыть</span>
+													</button>
+												</div>
+
+											</div>
+										</div>
+										<div data-category="2" class="reviews__slide slide-teachers swiper-slide">
+											<div class="reviews__item">
+												<div class="reviews__top">
+													<div class="reviews__image">
+														<img data-src="../img/photo/photo-2.png" alt="">
+													</div>
+													<div class="reviews__desc">
+														<div class="reviews__name">Виктор Ковалев</div>
+														<div class="reviews__subname">31.10.2024 на <a
+																href="#">Яндекс</a>
+														</div>
+													</div>
+												</div>
+												<div class="reviews__rating rating">
+													<div class="rating__body">
+														<div class="rating__line"></div>
+														<div class="rating__activeline"></div>
+														<div class="rating__stars">
+															<input type="radio" class="rating__star" value="1"
+																name="rating">
+															<input type="radio" class="rating__star" value="2"
+																name="rating">
+															<input type="radio" class="rating__star" value="3"
+																name="rating">
+															<input type="radio" class="rating__star" value="4"
+																name="rating">
+															<input type="radio" class="rating__star" value="5"
+																name="rating">
+														</div>
+														<input value="4.5" type="hidden" name="rating"
+															class="rating-input">
+													</div>
+												</div>
+												<div data-showmore class="reviews__showmore showmore">
+													<div data-showmore-content="130" class="reviews__showmore-content">
+														<p>
+															Очень полезный и интересный курс, вся информация четко
+															структурирована и разбита по блокам. Обратная связь и помощь
+														</p>
+													</div>
+													<button hidden data-showmore-button type="button"
+														class="reviews__more">
+														<span>Читать дальше</span>
+														<span>Скрыть</span>
+													</button>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__column">
+							<div class="reviews__title title">
+								<h5>Видео отзывы</h5>
+								<div class="reviews__arrows arrows">
+									<div class="reviews-prev arrow-prev _icon-arrow"></div>
+									<div class="reviews-next arrow-next _icon-arrow"></div>
+								</div>
+							</div>
+							<div class="reviews__content">
+								<div class="reviews__slider reviews-slider swiper">
+									<div class="reviews__wrapper swiper-wrapper">
+										<div data-category="2" class="reviews__slide swiper-slide">
+											<div data-popup="#review-video-1" class="reviews__item reviews-video">
+												<img loading="lazy" class="reviews__video-image"
+													src="../img/reviews-video-1.png" alt="">
+											</div>
+										</div>
+										<div data-category="3" class="reviews__slide swiper-slide">
+											<div data-popup="#review-video-2" class="reviews__item reviews-video">
+												<img loading="lazy" class="reviews__video-image"
+													src="../img/reviews-video-2.png" alt="">
+											</div>
+										</div>
+										<div data-category="4" class="reviews__slide swiper-slide">
+											<div data-popup="#review-video-2" class="reviews__item reviews-video">
+												<img class="reviews__video-image" loading="lazy"
+													src="../img/reviews-video-2.png" alt="">
+											</div>
+										</div>
+										<div data-category="2" class="reviews__slide swiper-slide">
+											<div data-popup="#review-video-2" class="reviews__item reviews-video">
+												<img class="reviews__video-image" loading="lazy"
+													src="../img/reviews-video-2.png" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__column">
+							<div class="reviews__title title">
+								<h5>Аудио отзывы</h5>
+								<div class="reviews__arrows arrows">
+									<div class="reviews-prev arrow-prev _icon-arrow"></div>
+									<div class="reviews-next arrow-next _icon-arrow"></div>
+								</div>
+							</div>
+							<div class="reviews__content">
+								<div class="reviews__slider reviews-slider swiper">
+									<div class="reviews__wrapper swiper-wrapper">
+										<div data-category="2" class="reviews__slide swiper-slide">
+											<div class="reviews__item audio-reviews">
+												<div class="reviews__top">
+													<div class="reviews__image">
+														<img data-src="../img/photo/photo-3.png" alt="">
+													</div>
+													<div class="reviews__desc">
+														<div class="reviews__name">Федор Аристархов</div>
+														<div class="reviews__subname">
+															Преподаватель Светлана <br>
+															Орабович
+														</div>
+													</div>
+												</div>
+												<img loading="lazy" src="../img/icons/audio.svg" alt=""
+													class="reviews__icon">
+												<div class="reviews__audio">
+													<audio id="audio1" class="custom-audio-player">
+														<source src="../files/audio/music1.mp3" type="audio/mp3">
+														Ваш браузер не поддерживает тег audio.
+													</audio>
+													<button data-target="audio1" class="custom-audio-button">
+														<img src="../img/icons/microphone-icon.svg" alt="">
+														Прослушать
+													</button>
+												</div>
+											</div>
+										</div>
+										<div data-category="3" class="reviews__slide swiper-slide">
+											<div class="reviews__item audio-reviews">
+												<div class="reviews__top">
+													<div class="reviews__image">
+														<img data-src="../img/photo/photo-3.png" alt="">
+													</div>
+													<div class="reviews__desc">
+														<div class="reviews__name">Федор Аристархов</div>
+														<div class="reviews__subname">
+															Преподаватель Светлана <br>
+															Орабович
+														</div>
+													</div>
+												</div>
+												<img loading="lazy" src="../img/icons/audio.svg" alt=""
+													class="reviews__icon">
+												<div class="reviews__audio">
+													<audio id="audio2" class="custom-audio-player">
+														<source src="../files/audio/music1.mp3" type="audio/mp3">
+														Ваш браузер не поддерживает тег audio.
+													</audio>
+													<button data-target="audio2" class="custom-audio-button">
+														<img src="../img/icons/microphone-icon.svg" alt="">
+														Прослушать
+													</button>
+												</div>
+											</div>
+										</div>
+										<div data-category="4" class="reviews__slide swiper-slide">
+											<div class="reviews__item audio-reviews">
+												<div class="reviews__top">
+													<div class="reviews__image">
+														<img data-src="../img/photo/photo-3.png" alt="">
+													</div>
+													<div class="reviews__desc">
+														<div class="reviews__name">Федор Аристархов</div>
+														<div class="reviews__subname">
+															Преподаватель Светлана <br>
+															Орабович
+														</div>
+													</div>
+												</div>
+												<img loading="lazy" src="../img/icons/audio.svg" alt=""
+													class="reviews__icon">
+												<div class="reviews__audio">
+													<audio id="audio3" class="custom-audio-player">
+														<source src="../files/audio/music1.mp3" type="audio/mp3">
+														Ваш браузер не поддерживает тег audio.
+													</audio>
+													<button data-target="audio3" class="custom-audio-button">
+														<img src="../img/icons/microphone-icon.svg" alt="">
+														Прослушать
+													</button>
+												</div>
+											</div>
+										</div>
+										<div data-category="2" class="reviews__slide swiper-slide">
+											<div class="reviews__item audio-reviews">
+												<div class="reviews__top">
+													<div class="reviews__image">
+														<img data-src="../img/photo/photo-3.png" alt="">
+													</div>
+													<div class="reviews__desc">
+														<div class="reviews__name">Федор Аристархов</div>
+														<div class="reviews__subname">
+															Преподаватель Светлана <br>
+															Орабович
+														</div>
+													</div>
+												</div>
+												<img loading="lazy" src="../img/icons/audio.svg" alt=""
+													class="reviews__icon">
+												<div class="reviews__audio">
+													<audio id="audio4" class="custom-audio-player">
+														<source src="../files/audio/music1.mp3" type="audio/mp3">
+														Ваш браузер не поддерживает тег audio.
+													</audio>
+													<button data-target="audio4" class="custom-audio-button">
+														<img src="../img/icons/microphone-icon.svg" alt="">
+														Прослушать
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-reviews-banner">
+				<div class="main-reviews-banner__container">
+					<div class="main-reviews-banner__content">
+						<div class="main-reviews-banner__top">
+							<h2><span>Будьте в курсе</span> всех самых актуальных событий школы</h2>
+							<img loading="lazy" src="../img/image/image-21.png" alt="">
+						</div>
+						<div class="main-reviews-banner__bottom">
+							<p>
+								Подпишитесь, чтобы получать свежие новости, информацию о вебинарах и специальных
+								предложениях на свою почту!
+							</p>
+							<form action="#" class="main-reviews-banner__form">
+								<input data-required autocomplete="off" type="text" name="form[]"
+									placeholder="Введите Ваш e-mail">
+								<button type="submit" class="main-reviews-banner__button button">Подписаться</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+	<div id="review-video-1" aria-hidden="true" class="popup video-popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__video">
+					<video loading="lazy" playsinline controls poster="../img/video-image.png"
+						class="popup__item-video video" src="./files/videos/video.mp4">
+						<source loading="lazy" src="./files/videos/video.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="review-video-2" aria-hidden="true" class="popup video-popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__video">
+					<video loading="lazy" playsinline controls poster="../img/video-image.png"
+						class="popup__item-video video" src="./files/videos/video.mp4">
+						<source loading="lazy" src="./files/videos/video.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

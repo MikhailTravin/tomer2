@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Отзывы"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page videos">
+			<div class="main-reviews">
+				<div class="main-reviews__container">
+					<h1 class="title1">
+						<span>Отзывы</span> учеников
+					</h1>
+					<div class="main-reviews__selects">
+						<div class="main-reviews__select">
+							<div class="select__choice">Тип отзыва</div>
+							<select name="form[]" class="form">
+								<option value="1" selected>Текстовые отзывы</option>
+								<option value="2" data-href="video-reviews.html">Видео отзывы</option>
+								<option value="3" data-href="text-reviews.html">Все типы</option>
+								<option value="4" data-href="audio-reviews.html">Аудио отзывы</option>
+							</select>
+						</div>
+						<div class="main-reviews__select">
+							<div class="select__choice">Выберите раздел</div>
+							<select name="form[]" class="form">
+								<option value="1" selected>Все отзывы</option>
+								<option value="2">Групповые занятия</option>
+								<option value="3">Курсы для начинающих</option>
+								<option value="4">Индивидуальные занятия</option>
+								<option value="5">Мастер -классы</option>
+								<option value="6">Вебинары</option>
+							</select>
+						</div>
+					</div>
+					<div class="main-reviews__cards">
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-1.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Анастасия Романовская</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-2.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Виктор Ковалев</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-2.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Виктор Ковалев</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-1.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Анастасия Романовская</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-2.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Виктор Ковалев</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-2.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Виктор Ковалев</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-1.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Анастасия Романовская</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-2.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Виктор Ковалев</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-2.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Виктор Ковалев</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-1.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Анастасия Романовская</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-2.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Виктор Ковалев</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-2.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Виктор Ковалев</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-1.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Анастасия Романовская</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-2.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Виктор Ковалев</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div class="reviews__item">
+								<div class="reviews__top">
+									<div class="reviews__image">
+										<img data-src="../img/photo/photo-2.png" alt="">
+									</div>
+									<div class="reviews__desc">
+										<div class="reviews__name">Виктор Ковалев</div>
+										<div class="reviews__subname">31.10.2024 на <a href="#">Яндекс</a>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__rating rating">
+									<div class="rating__body">
+										<div class="rating__line"></div>
+										<div class="rating__activeline"></div>
+										<div class="rating__stars">
+											<input type="radio" class="rating__star" value="1" name="rating">
+											<input type="radio" class="rating__star" value="2" name="rating">
+											<input type="radio" class="rating__star" value="3" name="rating">
+											<input type="radio" class="rating__star" value="4" name="rating">
+											<input type="radio" class="rating__star" value="5" name="rating">
+										</div>
+										<input value="4.5" type="hidden" name="rating" class="rating-input">
+									</div>
+								</div>
+								<div data-showmore class="reviews__showmore showmore">
+									<div data-showmore-content="105" class="reviews__showmore-content">
+										<p>
+											Очень полезный и интересный курс, вся информация четко
+											структурирована и разбита по блокам. Обратная связь и помощь
+											преподавателей очень помогла мне в работе с моей собакой.
+											Результат
+											занятий меня приятно Очень полезный и интересный курс, вся
+											информация четко
+										</p>
+									</div>
+									<button hidden data-showmore-button type="button" class="reviews__more">
+										<span>Читать дальше</span>
+										<span>Скрыть</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

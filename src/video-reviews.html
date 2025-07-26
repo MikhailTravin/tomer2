@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Отзывы"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page videos">
+			<div class="main-reviews">
+				<div class="main-reviews__container">
+					<h1 class="title1">
+						<span>Отзывы</span> учеников
+					</h1>
+					<div class="main-reviews__selects">
+						<div class="main-reviews__select">
+							<div class="select__choice">Тип отзыва</div>
+							<select name="form[]" class="form">
+								<option value="1" selected>Видео отзывы</option>
+								<option value="2" data-href="reviews.html">Все типы</option>
+								<option value="3" data-href="text-reviews.html">Текстовые отзывы</option>
+								<option value="4" data-href="audio-reviews.html">Аудио отзывы</option>
+							</select>
+						</div>
+						<div class="main-reviews__select">
+							<div class="select__choice">Выберите раздел</div>
+							<select name="form[]" class="form">
+								<option value="1" selected>Все отзывы</option>
+								<option value="2">Групповые занятия</option>
+								<option value="3">Курсы для начинающих</option>
+								<option value="4">Индивидуальные занятия</option>
+								<option value="5">Мастер -классы</option>
+								<option value="6">Вебинары</option>
+							</select>
+						</div>
+					</div>
+					<div class="main-reviews__cards">
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-1" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-1.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-2" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-2.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-2" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-2.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-1" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-1.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-2" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-2.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-2" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-2.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-1" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-1.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-2" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-2.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-2" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-2.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-1" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-1.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-2" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-2.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-2" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-2.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-1" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-1.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-2" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-2.png"
+									alt="">
+							</div>
+						</div>
+						<div class="main-reviews__card">
+							<div data-popup="#review-video-2" class="reviews__item reviews-video">
+								<img loading="lazy" class="reviews__video-image" src="../img/reviews-video-2.png"
+									alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+	<div id="review-video-1" aria-hidden="true" class="popup video-popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__video">
+					<video loading="lazy" playsinline controls poster="../img/video-image.png"
+						class="popup__item-video video" src="./files/videos/video.mp4">
+						<source loading="lazy" src="./files/videos/video.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="review-video-2" aria-hidden="true" class="popup video-popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__video">
+					<video loading="lazy" playsinline controls poster="../img/video-image.png"
+						class="popup__item-video video" src="./files/videos/video.mp4">
+						<source loading="lazy" src="./files/videos/video.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
