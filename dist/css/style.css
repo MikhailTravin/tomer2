@@ -9291,12 +9291,11 @@ p.strong {
   padding: 0px 0px 0px 0px;
 }
 
-.page1 .main-home__image {
-  height: 535px;
-  width: auto;
-  right: 70px;
-  bottom: auto;
-  top: 40px;
+.page1 .main-home__content {
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #f2f2fc;
+  padding: 45px 40px;
 }
 
 .page1 .main-home__logo {
@@ -9328,11 +9327,12 @@ p.strong {
   margin: 0px 0px 65px 0px;
 }
 
-.page1 .main-home__content {
-  border-radius: 30px;
-  overflow: hidden;
-  background-color: #f2f2fc;
-  padding: 45px 40px;
+.page1 .main-home__image {
+  height: 535px;
+  width: auto;
+  right: 70px;
+  bottom: auto;
+  top: 40px;
 }
 
 .page1 .programs-main-home__item p {
@@ -9877,6 +9877,46 @@ p.strong {
 .present-main-home__image img {
   width: 100px;
   height: 100px;
+}
+
+.main-home__content {
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #f2f2fc;
+}
+
+.main-home__image {
+  height: 568px;
+  width: auto;
+  right: 20px;
+  bottom: auto;
+  top: 0px;
+}
+
+.group-training .main-home__image {
+  height: 568px;
+  width: auto;
+  right: 20px;
+}
+
+.individual-lesson .main-home__image {
+  right: 20px;
+}
+
+.group-training-2 .main-home__image {
+  top: auto;
+  bottom: 0;
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+.group-training-b1 .main-home__image {
+  top: auto;
+  bottom: 0;
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 .swiper {
@@ -10465,17 +10505,19 @@ p.strong {
   .block-method__video {
     padding: 0px 0px 0px 0px;
   }
+
+  .main-home__image {
+    height: 450px;
+    top: 70px;
+  }
+
+  .group-training .main-home__image {
+    height: 450px;
+    top: 70px;
+  }
 }
 
 @media (max-width: 992px) {
-  .page1 .main-home__image {
-    position: relative;
-    top: 0;
-    height: 350px;
-    margin: 0 auto;
-    padding: 0px 0px 25px 0px;
-  }
-
   .page1 .main-home__body {
     max-width: 100%;
     display: -webkit-box;
@@ -10492,6 +10534,14 @@ p.strong {
 
   .page1 .main-home__top {
     width: 100%;
+  }
+
+  .page1 .main-home__image {
+    position: relative;
+    top: 0;
+    height: 350px;
+    margin: 0 auto;
+    padding: 0px 0px 25px 0px;
   }
 
   .page1 .students-speak-block__body {
@@ -10616,6 +10666,22 @@ p.strong {
         -ms-transform: translate(-50%, 0px);
             transform: translate(-50%, 0px);
     margin: 16px 10px 0px 10px;
+  }
+
+  .main-home__image {
+    top: 50%;
+    height: 350px;
+    -webkit-transform: translate(0px, -50%);
+        -ms-transform: translate(0px, -50%);
+            transform: translate(0px, -50%);
+  }
+
+  .group-training .main-home__image {
+    top: 0;
+    height: 350px;
+    -webkit-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
 }
 
@@ -11902,6 +11968,10 @@ p.strong {
     padding: 0px 0px 0px 0px;
   }
 
+  .page1 .main-home__content {
+    padding: 38px 30px 48px 30px;
+  }
+
   .page1 .main-home__logo {
     display: none;
   }
@@ -11921,10 +11991,6 @@ p.strong {
   .page1 .main-home__top {
     font-size: 16px;
     margin: 0px 0px 24px 0px;
-  }
-
-  .page1 .main-home__content {
-    padding: 38px 30px 48px 30px;
   }
 
   .page1 .main-home__programs {
@@ -12053,6 +12119,50 @@ p.strong {
 
   .present-main-home__item p {
     font-size: 12px;
+  }
+
+  .main-home__image {
+    width: 100%;
+    height: auto;
+    margin: -40px 0px 0px 0px;
+    top: 30px;
+    -webkit-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+
+  .group-training .main-home__image {
+    width: 100%;
+    height: auto;
+    margin: -40px 0px 0px 0px;
+    top: 30px;
+    -webkit-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+
+  .individual-lesson .main-home__image {
+    width: 100%;
+    height: auto;
+    margin: -40px 0px 0px 0px;
+    top: 30px;
+    -webkit-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    max-height: 100%;
+    border-radius: 0px;
+  }
+
+  .group-training-2 .main-home__image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .group-training-b1 .main-home__image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 
