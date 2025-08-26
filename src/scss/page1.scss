@@ -6,35 +6,22 @@
     .page__main-home {
         padding: 0px 0px 0px 0px;
     }
-    .main-home__image {
-        height: 535px;
-        width: auto;
-        right: 70px;
-        bottom: auto;
-        top: 40px;
-        @media (max-width: 1200px) {
-            right: 0;
-            height: 450px;
-            top: 70px;
-        }
-        @media (max-width: 992px) {
-            position: relative;
-            top: 0;
-            height: 350px;
-            margin: 0 auto;
-            padding: 0px 0px 25px 0px;
-        }
-        @media (max-width: 600px) {
-            width: 100%;
-            height: auto;
-        }
-    }
+
     .main-home__body {
         @media (max-width: 992px) {
             max-width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+    }
+    .main-home__content {
+        border-radius: 30px;
+        overflow: hidden;
+        background-color: #f2f2fc;
+        padding: 45px 40px;
+        @media (max-width: 768px) {
+            padding: 38px 30px 48px 30px;
         }
     }
     .main-home__logo {
@@ -90,13 +77,27 @@
             margin: 0px 0px 24px 0px;
         }
     }
-    .main-home__content {
-        border-radius: 30px;
-        overflow: hidden;
-        background-color: #f2f2fc;
-        padding: 45px 40px;
-        @media (max-width: 768px) {
-            padding: 38px 30px 48px 30px;
+    .main-home__image {
+        height: 535px;
+        width: auto;
+        right: 70px;
+        bottom: auto;
+        top: 40px;
+        @media (max-width: 1200px) {
+            right: 0;
+            height: 450px;
+            top: 70px;
+        }
+        @media (max-width: 992px) {
+            position: relative;
+            top: 0;
+            height: 350px;
+            margin: 0 auto;
+            padding: 0px 0px 25px 0px;
+        }
+        @media (max-width: 600px) {
+            width: 100%;
+            height: auto;
         }
     }
     .programs-main-home__item {
@@ -753,5 +754,67 @@
             width: 100px;
             height: 100px;
         }
+    }
+}
+
+.main-home__content {
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #f2f2fc;
+}
+.main-home__image {
+    height: 568px;
+    width: auto;
+    right: 20px;
+    bottom: auto;
+    top: 0px;
+    @media (max-width: 1200px) {
+        height: 450px;
+        top: 70px;
+    }
+    @media (max-width: 992px) {
+        top: 50%;
+        height: 350px;
+        transform: translate(0px, -50%);
+    }
+    @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+        margin: -40px 0px 0px 0px;
+        top: 30px;
+        transform: translate(0px, 0px);
+    }
+}
+.group-training .main-home__image {
+    height: 568px;
+    width: auto;
+    right: 20px;
+    @media (max-width: 1200px) {
+        height: 450px;
+        top: 70px;
+    }
+    @media (max-width: 992px) {
+        top: 0;
+        height: 350px;
+        transform: translate(0px, 0px);
+    }
+    @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+        margin: -40px 0px 0px 0px;
+        top: 30px;
+        transform: translate(0px, 0px);
+    }
+}
+.individual-lesson .main-home__image {
+    right: 20px;
+    @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+        margin: -40px 0px 0px 0px;
+        top: 30px;
+        transform: translate(0px, 0px);
+        max-height: 100%;
+        border-radius: 0px;
     }
 }
