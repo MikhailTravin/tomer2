@@ -1,0 +1,198 @@
+.popup-form1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    @media (max-width: 768px) {
+        gap: 16px;
+    }
+}
+.popup-form2 {
+    .popup-form__top {
+        margin: 0px 0px 32px 0px;
+        @media (max-width: 768px) {
+            margin: 0px 0px 0px 0px;
+        }
+    }
+}
+.popup-form {
+    .popup__content {
+        max-width: 558px;
+        padding: 46px;
+        @media (max-width: 768px) {
+            padding: 24px 16px;
+        }
+    }
+    .popup__close {
+        top: 0;
+        right: -64px;
+        @media (max-width: 768px) {
+            right: 0;
+            top: -29px;
+            width: 24px;
+            height: 24px;
+            svg {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+    // .popup-form__logo
+
+    &__logo {
+        display: flex;
+        img {
+            height: 86px;
+            width: auto;
+        }
+    }
+
+    // .popup-form__form
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        @media (max-width: 768px) {
+            gap: 16px;
+        }
+        &.blue {
+            .popup-form__title {
+                color: #3035c4;
+            }
+            .button {
+                background-color: #3035c4;
+                border: 1px solid #3035c4;
+                &:hover {
+                    color: #3035c4;
+                    background-color: transparent;
+                }
+            }
+        }
+        .checkbox {
+            width: 100%;
+        }
+        .checkbox__texts {
+            flex: 1 1 auto;
+            gap: 10px;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            .checkbox__text {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                color: #0151ab;
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                }
+            }
+        }
+        .checkbox__label {
+            align-items: center;
+        }
+        .checkbox__price {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 120%;
+            color: #0151ab;
+        }
+        .checkbox__input {
+            &:checked + .checkbox__label .checkbox__icon {
+                background-color: #0151ab;
+            }
+        }
+        .checkbox__icon {
+            margin: 0px 12px 0px 0px;
+            width: 24px;
+            height: 24px;
+            flex: 0 0 24px;
+            background: #f2f2f5;
+            border: 1px solid #b4b7c1;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .checkbox__text {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 120%;
+            color: #000;
+            a {
+                text-decoration: underline;
+                text-decoration-skip-ink: none;
+                color: #3035c4;
+                transition: opacity 0.3s;
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+        .button {
+            width: 287px;
+            margin: 8px 0px 0px 0px;
+            @media (max-width: 768px) {
+                margin: 16px 0px 0px 0px;
+            }
+            @media (max-width: 374px) {
+                width: 100%;
+            }
+        }
+    }
+
+    // .popup-form__top
+
+    &__top {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            @media (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    // .popup-form__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
+    }
+
+    // .popup-form__inputs
+
+    &__inputs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        input {
+            background: #f2f2f5;
+            height: 55px;
+            width: 100%;
+            padding: 5px 20px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 171%;
+            border: 1px solid #0151ab;
+            border-radius: 8px;
+            &::placeholder {
+                color: #676b78;
+            }
+            @media (max-width: 768px) {
+                font-size: 13px;
+            }
+        }
+    }
+}
