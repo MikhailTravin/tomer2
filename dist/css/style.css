@@ -10519,6 +10519,352 @@ p.strong {
   color: #fff;
 }
 
+.individual-lesson3 .main-home__programs {
+  margin: 0px 0px 20px 0px;
+  max-width: 660px;
+}
+
+.individual-lesson3 .programs-main-home__item {
+  border-radius: 20px 0;
+}
+
+.individual-lesson3 .programs-main-home__icon {
+  margin: 0px 0px 5px 0px;
+}
+
+.individual-lesson3 .programs-main-home__title {
+  font-weight: 400;
+}
+
+.individual-lesson3 .programs-main-home__title span {
+  font-weight: 700;
+  color: #e6514a;
+}
+
+.individual-lesson3 .main-home__buttons {
+  margin: 0px 0px 0px 0px;
+}
+
+.individual-lesson3 .main-home__button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 378px;
+          flex: 0 1 378px;
+  padding: 0px 0px 0px 0px;
+}
+
+.individual-lesson3 .main-home__button .button {
+  padding: 16px;
+}
+
+.individual-lesson3 .main-home__image {
+  width: auto;
+  right: 100px;
+  right: 7px;
+}
+
+.individual-lesson3 .main-home__image img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.individual-lesson3 .main-home__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #f2f2fc;
+  border-radius: 30px;
+  padding: 60px 40px 35px 40px;
+}
+
+.individual-lesson3 .main-home__body {
+  margin: 0px 0px 40px 0px;
+}
+
+.individual-lesson3 .main-home__top {
+  font-size: 24px;
+}
+
+.individual-lesson3 .main-home__subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 110%;
+  color: #000;
+  margin: 6px 0px 0px 0px;
+}
+
+.individual-lesson3 .free-lesson-block__content {
+  padding: 25px 38px;
+}
+
+.individual-lesson3 .free-lesson-block__content h2 {
+  font-size: 42px;
+  line-height: 124%;
+}
+
+.individual-lesson3 .free-lesson-block__image {
+  margin: 0px 5px 0px 0px;
+}
+
+.individual-lesson3 .free-lesson-block__svg-desc {
+  width: 100%;
+  margin: 0px 34px 45px -34px;
+}
+
+.individual-lesson3 .free-lesson-block__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.individual-lesson3 .free-lesson-block__button {
+  width: auto;
+  margin: 0px 0px 0px 0px;
+  padding: 16px 32px;
+}
+
+.individual-lesson3 .free-lesson-block__lists ul li::before {
+  font-size: 10px;
+}
+
+.individual-lesson3 .benefits-block2 .benefits-block__content {
+  background: transparent;
+}
+
+.individual-lesson3 .benefits-block2 .benefits-block__body {
+  gap: 30px;
+  margin: 0px 0px 0px 0px;
+}
+
+.individual-lesson3 .benefits-block2 .benefits-block__title h2 {
+  font-size: 46px;
+}
+
+.individual-lesson3 .benefits-block2 .benefits-block__title h2 span {
+  color: #3035c4;
+}
+
+.individual-lesson3 .benefits-block2 .benefits-block__icon {
+  border-bottom: 2px solid #3035c4;
+}
+
+.individual-lesson3 .benefits-block2 .benefits-block__column {
+  background: transparent;
+  padding: 0px 0px 0px 0px;
+}
+
+.individual-lesson3 .benefits-block2 .benefits-block__column:first-child {
+  padding: 0px 0px 0px 8px;
+}
+
+.individual-lesson3 .offer-block__content p {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  color: #fff;
+  margin: 0px 0px 24px 0px;
+}
+
+.individual-lesson3 .offer-block__text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.individual-lesson3 .offer-block__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 550px;
+          flex: 1 1 550px;
+  padding: 21px 12px;
+}
+
+.individual-lesson3 .offer-block__item ul li {
+  font-size: 18px;
+}
+
+.individual-lesson3 .offer-block__button {
+  font-family: "Roboto", sans-serif;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: auto;
+  padding: 18px 42px;
+  margin: 0px 0px 0px 32px;
+}
+
+.individual-lesson3 .offer-block__titles {
+  margin: 0px 0px 0px 0px;
+}
+
+.individual-lesson3 .page__about h2 {
+  margin: 0px 0px 48px 0px;
+}
+
+.individual-lesson3 .tax-deduction__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.individual-lesson3 .tax-deduction__container .button {
+  margin: 30px 0px 0px 0px;
+  padding: 16px 48px;
+}
+
+.individual-lesson3 .reviews__item {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0px 0px 0px 0px;
+}
+
+.individual-lesson3 .training-results__body ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: -12px 0px;
+}
+
+.individual-lesson3 .training-results__body ul li {
+  padding: 12px 0px;
+  font-size: 16px;
+}
+
+.individual-lesson3 .training-results__body .button {
+  margin-left: -32px;
+  width: 240px;
+  margin-top: auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.block-benefits2 {
+  background-color: #f9f9f9;
+  padding: 48px 0px 38px 0px;
+}
+
+.block-benefits2 .title2 {
+  margin: 0px 0px 30px 0px;
+}
+
+.block-benefits2__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;
+}
+
+.block-benefits2__column {
+  border-radius: 30px;
+  padding: 24px;
+  -webkit-box-shadow: 5px 5px 15px 0 rgba(147, 164, 188, 0.3), -1px -1px 5px 0 rgba(147, 164, 188, 0.15);
+          box-shadow: 5px 5px 15px 0 rgba(147, 164, 188, 0.3), -1px -1px 5px 0 rgba(147, 164, 188, 0.15);
+  background: #fff;
+}
+
+.block-benefits2__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  gap: 24px;
+}
+
+.block-benefits2__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60px;
+          flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-benefits2__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.block-benefits2__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+}
+
+.block-benefits2__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+}
+
+.block-benefits2__buttons {
+  position: relative;
+  top: -45px;
+  max-width: 50%;
+  margin-left: auto;
+}
+
+.block-benefits2__buttons .button {
+  width: 454px;
+  margin: 30px 0px 0px 0px;
+  margin-left: auto;
+  text-transform: none;
+  gap: 5px;
+}
+
+.block-benefits2__text1 {
+  margin: 20px 0px -30px 10px;
+  font-family: "SegoePrint", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  color: #e6514a;
+}
+
+.block-benefits2__text2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: right;
+  max-width: 432px;
+  margin-left: auto;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -10603,6 +10949,27 @@ p.strong {
 
   .teachers__slider.swiper {
     overflow: visible;
+  }
+}
+
+@media (min-width: 769px) {
+  .block-benefits2__column:nth-child(4) {
+    margin: -60px 0px 0px 0px;
+  }
+
+  .block-benefits2__column:nth-child(6) {
+    margin: -60px 0px 0px 0px;
+  }
+
+  .block-benefits2__column:nth-child(even) {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+
+  .block-benefits2__column:nth-child(even) .block-benefits2__subtitle {
+    font-size: 16px;
+    line-height: 140%;
   }
 }
 
@@ -10708,6 +11075,15 @@ p.strong {
         -ms-flex: 0 1 570px;
             flex: 0 1 570px;
     width: 570px;
+  }
+}
+
+@media (min-width: 1310px) {
+  .individual-lesson3 .benefits-block2 .benefits-block__body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -11088,6 +11464,45 @@ p.strong {
         -ms-flex: 0 1 calc(33.3333% - 30px);
             flex: 0 1 calc(33.3333% - 30px);
   }
+
+  .individual-lesson3 .main-home__image {
+    right: 0;
+  }
+
+  .individual-lesson3 .free-lesson-block__image {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .individual-lesson3 .free-lesson-block__svg-desc {
+    margin-right: auto;
+    width: 80%;
+    margin: 0px 0px 10px 0px;
+    height: auto;
+  }
+
+  .individual-lesson3 .free-lesson-block__buttons {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+
+  .individual-lesson3 .free-lesson-block__button {
+    margin: 14px 0px 0px 15px;
+    margin-left: auto;
+    padding: 16px;
+  }
+
+  .individual-lesson3 .free-lesson-block__lists {
+    width: 100%;
+  }
+
+  .individual-lesson3 .benefits-block2 .benefits-block__body {
+    padding: 16px;
+  }
+
+  .individual-lesson3 .training-results__body .button {
+    margin-left: 0px;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -11097,6 +11512,14 @@ p.strong {
 
   .page1 .students-speak-block__text1 {
     margin: 0px 0px 20px 0px;
+  }
+
+  .block-benefits2__buttons {
+    top: 0;
+  }
+
+  .block-benefits2__text1 {
+    margin: 20px 0px 10px 10px;
   }
 }
 
@@ -11343,6 +11766,48 @@ p.strong {
 
   .group-training-b1-b2 .for-whom__item {
     height: 100%;
+  }
+
+  .individual-lesson3 .free-lesson-block__content {
+    padding: 16px;
+  }
+
+  .individual-lesson3 .offer-block__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .individual-lesson3 .offer-block__button {
+    margin: 0 auto;
+    margin: 16px 0px 0px 0px;
+  }
+
+  .individual-lesson3 .training-results__content h2 {
+    margin: 0px 0px 18px 0px;
+  }
+
+  .individual-lesson3 .training-results__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
+  }
+
+  .individual-lesson3 .training-results__body .button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+
+  .block-benefits2__body {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .block-benefits2__buttons {
+    max-width: 100%;
   }
 }
 
@@ -13036,6 +13501,224 @@ p.strong {
 
   .group-training-b1-b2 .tax-deduction {
     margin: 0px 0px 16px 0px;
+  }
+
+  .individual-lesson3 .main-home__bg {
+    display: none;
+  }
+
+  .individual-lesson3 .main-home__programs {
+    margin: 10px 0px 0px 0px;
+    max-width: 100%;
+  }
+
+  .individual-lesson3 .programs-main-home__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    padding: 10px 10px 13px 10px;
+  }
+
+  .individual-lesson3 .programs-main-home__icon {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .individual-lesson3 .main-home__buttons {
+    margin: 0px 6px;
+  }
+
+  .individual-lesson3 .main-home__button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .individual-lesson3 .main-home__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: calc(100% + 40px);
+    max-height: auto;
+    margin: 0px -20px 40px -20px;
+    border-radius: 30px 30px 0px 0px;
+  }
+
+  .individual-lesson3 .main-home__image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px 30px 0px 0px;
+  }
+
+  .individual-lesson3 .main-home__content {
+    padding: 18px 17px 8px 17px;
+  }
+
+  .individual-lesson3 .main-home__body {
+    max-width: 100%;
+    margin: 0px 0px -60px 0px;
+  }
+
+  .individual-lesson3 .main-home__top {
+    font-size: 16px;
+  }
+
+  .individual-lesson3 .main-home__subtitle {
+    font-size: 15px;
+    line-height: 110%;
+  }
+
+  .individual-lesson3 .main-home__title {
+    font-size: 32px;
+    line-height: 110%;
+  }
+
+  .individual-lesson3 .free-lesson-block__content h2 {
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .individual-lesson3 .free-lesson-block__buttons {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .individual-lesson3 .free-lesson-block__button {
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .individual-lesson3 .benefits-block2 .benefits-block__title h2 {
+    font-size: 24px;
+  }
+
+  .individual-lesson3 .benefits-block2 .benefits-block__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 159px;
+            flex: 0 0 159px;
+  }
+
+  .individual-lesson3 .about {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .individual-lesson3 .offer-block__content p {
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .individual-lesson3 .offer-block__top {
+    margin: 0px 0px 16px 0px;
+  }
+
+  .individual-lesson3 .offer-block__item {
+    padding: 12px;
+  }
+
+  .individual-lesson3 .offer-block__item ul li {
+    font-size: 16px;
+  }
+
+  .individual-lesson3 .page__about h2 {
+    margin: 0px 0px 32px 0px;
+  }
+
+  .individual-lesson3 .tax-deduction {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .individual-lesson3 .reviews {
+    margin: 0px 0px 16px 0px;
+  }
+
+  .individual-lesson3 .training-results__content {
+    padding: 16px 20px 22px 16px;
+  }
+
+  .individual-lesson3 .training-results__content h2 {
+    font-size: 24px;
+    line-height: 150%;
+    margin: 0px 0px 8px 0px;
+  }
+
+  .individual-lesson3 .training-results__image {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .individual-lesson3 .training-results__body ul {
+    margin: -6px 0px;
+  }
+
+  .individual-lesson3 .training-results__body ul li {
+    padding: 6px 0px;
+  }
+
+  .block-benefits2 {
+    padding: 44px 0px 32px 0px;
+    margin: 0px 0px 16px 0px;
+  }
+
+  .block-benefits2 .title2 {
+    margin: 0px 0px 32px 0px;
+  }
+
+  .block-benefits2__column {
+    padding: 12px;
+  }
+
+  .block-benefits2__item {
+    gap: 12px;
+  }
+
+  .block-benefits2__icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40px;
+            flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .block-benefits2__icon svg {
+    height: 40px;
+    width: auto;
+  }
+
+  .block-benefits2__title {
+    font-size: 20px;
+  }
+
+  .block-benefits2__subtitle {
+    font-size: 14px;
+  }
+
+  .block-benefits2__buttons .button {
+    width: 100%;
+    margin: 36px 0px 0px 0px;
+  }
+
+  .block-benefits2__buttons .button span {
+    display: none;
+  }
+
+  .block-benefits2__text1 {
+    font-size: 24px;
+    margin: 40px 0px 25px 10px;
+  }
+
+  .block-benefits2__text2 {
+    font-size: 16px;
   }
 }
 
@@ -15997,6 +16680,13 @@ p.strong {
   }
 }
 
+@media (max-width: 500px) {
+  .individual-lesson3 .tax-deduction__container .button {
+    padding: 16px 10px;
+    margin: 32px 0px 0px 0px;
+  }
+}
+
 @media (max-width: 480px) {
   .subscribe-popup__items {
     width: 100%;
@@ -16054,6 +16744,22 @@ p.strong {
 
   .group-training-b1-b2 .present-main-home__title {
     font-size: 14px;
+  }
+
+  .individual-lesson3 .programs-main-home__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .individual-lesson3 .offer-block__button {
+    padding: 18px;
+    width: 100%;
+  }
+
+  .individual-lesson3 .training-results__body .button {
+    width: 100%;
   }
 }
 
@@ -16385,6 +17091,10 @@ p.strong {
   .main-tests__button {
     width: 100%;
     padding: 16px;
+  }
+
+  .individual-lesson3 .main-home__buttons {
+    margin: 0px 0px 0px 0px;
   }
 }
 
