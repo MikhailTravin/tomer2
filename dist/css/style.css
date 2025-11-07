@@ -10865,6 +10865,102 @@ p.strong {
   margin-left: auto;
 }
 
+.individual-lesson-new .programs-main-home__icon {
+  margin: 0px 0px 5px 0px;
+}
+
+.individual-lesson-new .programs-main-home__item {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.individual-lesson-new .programs-main-home__title {
+  font-size: 24px;
+}
+
+.individual-lesson-new .free-lesson-block__body {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.individual-lesson-new .free-lesson-block__sale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0px 0px -10px;
+}
+
+.individual-lesson-new .free-lesson-block__button {
+  margin: 37px 25px 0px 0px;
+}
+
+.individual-lesson-new .free-lesson-block__buttons {
+  position: relative;
+}
+
+.individual-lesson-new .free-lesson-block__svg-desc {
+  position: absolute;
+  right: 10px;
+  top: 50px;
+}
+
+.individual-lesson-new .free-lesson-block__content {
+  padding: 38px 25px 28px 38px;
+}
+
+.individual-lesson-new .free-lesson-block__text {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  color: #fff;
+  margin: 20px 0px 0px 0px;
+}
+
+.individual-lesson-new .for-whom__body {
+  padding: 20px 26px 62px 22px;
+}
+
+.individual-lesson-new .for-whom__body svg {
+  height: calc(100% - 230px);
+}
+
+.individual-lesson-new .for-whom__column {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.individual-lesson-new .for-whom__row:nth-child(1) .for-whom__column:last-child {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0px 0px 20px 0px;
+}
+
+.individual-lesson-new .for-whom__row:nth-child(3) .for-whom__column:last-child {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0px 0px 20px 0px;
+}
+
+.individual-lesson-new .training-results__content {
+  padding: 38px 38px 73px 38px;
+}
+
+.individual-lesson-new .training-results__body ul {
+  margin: -11.5px 0px;
+}
+
+.individual-lesson-new .training-results__body ul li {
+  padding: 11.5px 0px;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -11503,6 +11599,12 @@ p.strong {
   .individual-lesson3 .training-results__body .button {
     margin-left: 0px;
   }
+
+  .individual-lesson-new .free-lesson-block__body {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -11808,6 +11910,27 @@ p.strong {
 
   .block-benefits2__buttons {
     max-width: 100%;
+  }
+
+  .individual-lesson-new .free-lesson-block__sale {
+    margin: 10px 0px 0px 0px;
+  }
+
+  .individual-lesson-new .free-lesson-block__sale img {
+    width: 100%;
+    height: auto;
+  }
+
+  .individual-lesson-new .free-lesson-block__button {
+    margin: 37px 0px 0px 0px;
+  }
+
+  .individual-lesson-new .free-lesson-block__buttons {
+    margin: 0px 0px 0px 20px;
+  }
+
+  .individual-lesson-new .free-lesson-block__svg-desc {
+    display: none;
   }
 }
 
@@ -13719,6 +13842,66 @@ p.strong {
 
   .block-benefits2__text2 {
     font-size: 16px;
+  }
+
+  .individual-lesson-new .programs-main-home__icon {
+    margin: 0px 0px 4px 0px;
+  }
+
+  .individual-lesson-new .programs-main-home__item {
+    padding: 10px 10px 8px 10px;
+  }
+
+  .individual-lesson-new .programs-main-home__title {
+    font-size: 18px;
+  }
+
+  .individual-lesson-new .free-lesson-block__body {
+    position: relative;
+  }
+
+  .individual-lesson-new .free-lesson-block__sale {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+  }
+
+  .individual-lesson-new .free-lesson-block__sale img {
+    width: auto;
+    height: 77px;
+    -webkit-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+
+  .individual-lesson-new .free-lesson-block__button {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .individual-lesson-new .free-lesson-block__buttons {
+    position: static;
+  }
+
+  .individual-lesson-new .free-lesson-block__content {
+    padding: 16px;
+  }
+
+  .individual-lesson-new .free-lesson-block__text {
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+  }
+
+  .individual-lesson-new .training-results__content {
+    padding: 16px 20px 36px 16px;
+  }
+
+  .individual-lesson-new .training-results__body ul {
+    margin: -6px 0px;
+  }
+
+  .individual-lesson-new .training-results__body ul li {
+    padding: 6px 0px;
   }
 }
 
