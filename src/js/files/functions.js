@@ -451,141 +451,260 @@ export function menuClose() {
 Сниппет (HTML): showmore
 */
 export function showMore() {
-	const showMoreButtons = document.querySelector('[data-showmore-buttons]');
+	window.addEventListener("load", function (e) {
+		const showMoreBlocks = document.querySelectorAll('[data-showmore]');
+		let showMoreBlocksRegular;
+		let mdQueriesArray;
 
-	if (showMoreButtons) {
-		const showMoreButton = document.querySelector('[data-showmore-button]');
-		const collapseButton = document.querySelector('[data-collapse-button]');
-		const productsLength = document.querySelectorAll('[data-showmore-content]').length;
-		let items = 2;
-		const array = Array.from(document.querySelector('[data-showmore]').children);
-		const visItems = array.slice(0);
-		showMoreButton.addEventListener('click', () => {
-			visItems.forEach(el => el.classList.add('_active'));
-			showMoreButtons.classList.add("_showmore-active")
-		});
+		if (showMoreBlocks.length) {
+			showMoreBlocksRegular = Array.from(showMoreBlocks).filter(function (item, index, self) {
+				return !item.dataset.showmoreMedia;
+			});
 
-		collapseButton.addEventListener("click", function (e) {
-			visItems.forEach(el => el.classList.remove('_active'));
-			showMoreButtons.classList.remove("_showmore-active")
-		});
+			showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
 
-		if (productsLength <= 2) {
-			showMoreButtons.classList.add("_hidden")
-		}
-	}
+			document.addEventListener("click", showMoreActions);
+			window.addEventListener("resize", showMoreActions);
 
-	const showMoreBlocks = document.querySelectorAll('.showmore');
-
-	if (showMoreBlocks) {
-		window.addEventListener("load", function (e) {
-			let showMoreBlocksRegular;
-			let mdQueriesArray;
-			if (showMoreBlocks.length) {
-				// Получение обычных объектов
-				showMoreBlocksRegular = Array.from(showMoreBlocks).filter(function (item, index, self) {
-					return !item.dataset.showmoreMedia;
-				});
-				// Инициализация обычных объектов
-				showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
-
-				document.addEventListener("click", showMoreActions);
-				window.addEventListener("resize", showMoreActions);
-
-				// Получение объектов с медиа запросами
-				mdQueriesArray = dataMediaQueries(showMoreBlocks, "showmoreMedia");
-				if (mdQueriesArray && mdQueriesArray.length) {
-					mdQueriesArray.forEach(mdQueriesItem => {
-						// Событие
-						mdQueriesItem.matchMedia.addEventListener("change", function () {
-							initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-						});
-					});
-					initItemsMedia(mdQueriesArray);
-				}
-			}
-			function initItemsMedia(mdQueriesArray) {
+			mdQueriesArray = dataMediaQueries(showMoreBlocks, "showmoreMedia");
+			if (mdQueriesArray && mdQueriesArray.length) {
 				mdQueriesArray.forEach(mdQueriesItem => {
-					initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+					mdQueriesItem.matchMedia.addEventListener("change", function () {
+						initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+					});
 				});
+				initItemsMedia(mdQueriesArray);
 			}
-			function initItems(showMoreBlocks, matchMedia) {
-				showMoreBlocks.forEach(showMoreBlock => {
-					initItem(showMoreBlock, matchMedia);
-				});
-			}
-			function initItem(showMoreBlock, matchMedia = false) {
-				showMoreBlock = matchMedia ? showMoreBlock.item : showMoreBlock;
-				let showMoreContent = showMoreBlock.querySelectorAll('[data-showmore-content]');
-				let showMoreButton = showMoreBlock.querySelectorAll('[data-showmore-button]');
-				showMoreContent = Array.from(showMoreContent).filter(item => item.closest('[data-showmore]') === showMoreBlock)[0];
-				showMoreButton = Array.from(showMoreButton).filter(item => item.closest('[data-showmore]') === showMoreBlock)[0];
-				const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
-				if (matchMedia.matches || !matchMedia) {
-					if (hiddenHeight < getOriginalHeight(showMoreContent)) {
-						_slideUp(showMoreContent, 0, hiddenHeight);
-						showMoreButton.hidden = false;
-					} else {
-						_slideDown(showMoreContent, 0, hiddenHeight);
-						showMoreButton.hidden = true;
-					}
+		}
+
+		function initItemsMedia(mdQueriesArray) {
+			mdQueriesArray.forEach(mdQueriesItem => {
+				initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+			});
+		}
+
+		function initItems(showMoreBlocks, matchMedia) {
+			showMoreBlocks.forEach(showMoreBlock => {
+				initItem(showMoreBlock, matchMedia);
+			});
+		}
+
+		function initItem(showMoreBlock, matchMedia = false) {
+			showMoreBlock = matchMedia ? showMoreBlock.item : showMoreBlock;
+			let showMoreContent = showMoreBlock.querySelectorAll('[data-showmore-content]');
+			let showMoreButton = showMoreBlock.querySelectorAll('[data-showmore-button]');
+			showMoreContent = Array.from(showMoreContent).filter(item => item.closest('[data-showmore]') === showMoreBlock)[0];
+			showMoreButton = Array.from(showMoreButton).filter(item => item.closest('[data-showmore]') === showMoreBlock)[0];
+
+			// Получаем кастомную кнопку для расчета высоты
+			const customButton = showMoreBlock.querySelector('.main-reviews-showmore__button');
+			const hiddenHeight = getHeight(showMoreBlock, showMoreContent, customButton);
+
+			if (matchMedia.matches || !matchMedia) {
+				if (hiddenHeight < getOriginalHeight(showMoreContent)) {
+					_slideUp(showMoreContent, 0, showMoreBlock.classList.contains('_showmore-active') ? getOriginalHeight(showMoreContent) : hiddenHeight);
+					showMoreButton.hidden = false;
 				} else {
 					_slideDown(showMoreContent, 0, hiddenHeight);
 					showMoreButton.hidden = true;
 				}
+			} else {
+				_slideDown(showMoreContent, 0, hiddenHeight);
+				showMoreButton.hidden = true;
 			}
-			function getHeight(showMoreBlock, showMoreContent) {
-				let hiddenHeight = 0;
-				const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : 'size';
-				if (showMoreType === 'items') {
-					const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 3;
-					const showMoreItems = showMoreContent.children;
-					for (let index = 1; index < showMoreItems.length; index++) {
-						const showMoreItem = showMoreItems[index - 1];
-						hiddenHeight += showMoreItem.offsetHeight;
-						if (index == showMoreTypeValue) break
-					}
-				} else {
-					const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 150;
-					hiddenHeight = showMoreTypeValue;
+		}
+
+		// ОБНОВЛЕННАЯ ФУНКЦИЯ getHeight
+		function getHeight(showMoreBlock, showMoreContent, customButton) {
+			let hiddenHeight = 0;
+			const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : 'size';
+			const rowGap = parseFloat(getComputedStyle(showMoreContent).rowGap) ? parseFloat(getComputedStyle(showMoreContent).rowGap) : 0;
+
+			// Проверяем, есть ли кастомная кнопка и нужно ли специальное поведение
+			if (customButton && showMoreBlock.classList.contains('main-reviews-showmore')) {
+				// Получаем высоту кнопки
+				const buttonHeight = customButton.offsetHeight;
+
+				// Определяем дополнительные пиксели в зависимости от ширины экрана
+				const windowWidth = window.innerWidth;
+				let extraPixels = 58; // по умолчанию для десктопа
+
+				if (windowWidth <= 992) {
+					extraPixels = 70; // для мобильных
 				}
+
+				// Общая высота = высота кнопки + дополнительные пиксели
+				hiddenHeight = buttonHeight + extraPixels;
+
 				return hiddenHeight;
 			}
-			function getOriginalHeight(showMoreContent) {
-				let parentHidden;
-				let hiddenHeight = showMoreContent.offsetHeight;
-				showMoreContent.style.removeProperty('height');
-				if (showMoreContent.closest(`[hidden]`)) {
-					parentHidden = showMoreContent.closest(`[hidden]`);
-					parentHidden.hidden = false;
+
+			// Стандартная логика для других случаев
+			if (showMoreType === 'items') {
+				const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 3;
+				const showMoreItems = showMoreContent.children;
+
+				for (let index = 1; index < showMoreItems.length; index++) {
+					const showMoreItem = showMoreItems[index - 1];
+					const marginTop = parseFloat(getComputedStyle(showMoreItem).marginTop) ? parseFloat(getComputedStyle(showMoreItem).marginTop) : 0;
+					const marginBottom = parseFloat(getComputedStyle(showMoreItem).marginBottom) ? parseFloat(getComputedStyle(showMoreItem).marginBottom) : 0;
+
+					hiddenHeight += showMoreItem.offsetHeight + marginTop;
+					if (index == showMoreTypeValue) break;
+					hiddenHeight += marginBottom;
 				}
-				let originalHeight = showMoreContent.offsetHeight;
-				parentHidden ? parentHidden.hidden = true : null;
-				showMoreContent.style.height = `${hiddenHeight}px`;
-				return originalHeight;
+				rowGap ? hiddenHeight += (showMoreTypeValue - 1) * rowGap : null;
+			} else {
+				// Для обычного режима, если нет кастомной кнопки
+				const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 150;
+				hiddenHeight = showMoreTypeValue;
 			}
-			function showMoreActions(e) {
-				const targetEvent = e.target;
-				const targetType = e.type;
-				if (targetType === 'click') {
-					if (targetEvent.closest('[data-showmore-button]')) {
-						const showMoreButton = targetEvent.closest('[data-showmore-button]');
-						const showMoreBlock = showMoreButton.closest('[data-showmore]');
-						const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
-						const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : '500';
-						const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
-						if (!showMoreContent.classList.contains('_slide')) {
-							showMoreBlock.classList.contains('_showmore-active') ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
-							showMoreBlock.classList.toggle('_showmore-active');
+
+			return hiddenHeight;
+		}
+
+		function getOriginalHeight(showMoreContent) {
+			let parentHidden;
+			let hiddenHeight = showMoreContent.offsetHeight;
+			showMoreContent.style.removeProperty('height');
+
+			if (showMoreContent.closest(`[hidden]`)) {
+				parentHidden = showMoreContent.closest(`[hidden]`);
+				parentHidden.hidden = false;
+			}
+
+			let originalHeight = showMoreContent.offsetHeight;
+			parentHidden ? parentHidden.hidden = true : null;
+			showMoreContent.style.height = `${hiddenHeight}px`;
+			return originalHeight;
+		}
+
+		function showMoreActions(e) {
+			const targetEvent = e.target;
+			const targetType = e.type;
+
+			if (targetType === 'click') {
+				const customButton = targetEvent.closest('.main-reviews-showmore__button');
+				const dataButton = targetEvent.closest('[data-showmore-button]');
+
+				if (customButton) {
+					e.preventDefault();
+					e.stopPropagation();
+
+					const innerDataButton = customButton.querySelector('[data-showmore-button]');
+					if (innerDataButton) {
+						const showMoreBlock = innerDataButton.closest('[data-showmore]');
+						if (showMoreBlock) {
+							const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
+							const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : '500';
+
+							// Передаем customButton в getHeight
+							const hiddenHeight = getHeight(showMoreBlock, showMoreContent, customButton);
+
+							if (!showMoreContent.classList.contains('_slide')) {
+								if (!showMoreBlock.classList.contains('_showmore-active')) {
+									_slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
+								} else {
+									_slideUp(showMoreContent, showMoreSpeed, hiddenHeight);
+								}
+								showMoreBlock.classList.toggle('_showmore-active');
+
+								const columnBlock = showMoreBlock.closest('.main-reviews-top__column');
+								if (columnBlock) {
+									const isActive = showMoreBlock.classList.contains('_showmore-active');
+									columnBlock.classList.toggle('_showmore-open', isActive);
+
+									if (customButton) {
+										const arrow = customButton.querySelector('[data-showmore-button]');
+										if (arrow) {
+											arrow.style.transform = isActive ? 'rotate(180deg)' : 'rotate(0deg)';
+										}
+									}
+								}
+							}
 						}
 					}
-				} else if (targetType === 'resize') {
-					showMoreBlocksRegular && showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
-					mdQueriesArray && mdQueriesArray.length ? initItemsMedia(mdQueriesArray) : null;
+					return;
+				}
+
+				if (dataButton && !targetEvent.closest('.main-reviews-showmore__button')) {
+					const showMoreButton = dataButton;
+					const showMoreBlock = showMoreButton.closest('[data-showmore]');
+					const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
+					const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : '500';
+
+					// Получаем customButton для этого блока
+					const customButton = showMoreBlock.querySelector('.main-reviews-showmore__button');
+					const hiddenHeight = getHeight(showMoreBlock, showMoreContent, customButton);
+
+					if (!showMoreContent.classList.contains('_slide')) {
+						if (!showMoreBlock.classList.contains('_showmore-active')) {
+							_slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
+						} else {
+							_slideUp(showMoreContent, showMoreSpeed, hiddenHeight);
+						}
+						showMoreBlock.classList.toggle('_showmore-active');
+
+						const columnBlock = showMoreBlock.closest('.main-reviews-top__column');
+						if (columnBlock) {
+							const isActive = showMoreBlock.classList.contains('_showmore-active');
+							columnBlock.classList.toggle('_showmore-open', isActive);
+
+							const customBtn = columnBlock.querySelector('.main-reviews-showmore__button');
+							if (customBtn) {
+								const arrow = customBtn.querySelector('[data-showmore-button]');
+								if (arrow) {
+									arrow.style.transform = isActive ? 'rotate(180deg)' : 'rotate(0deg)';
+								}
+							}
+						}
+					}
+				}
+			} else if (targetType === 'resize') {
+				showMoreBlocksRegular && showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
+				mdQueriesArray && mdQueriesArray.length ? initItemsMedia(mdQueriesArray) : null;
+			}
+		}
+	});
+
+	// Синхронизация начального состояния
+	function syncInitialState() {
+		const columns = document.querySelectorAll('.main-reviews-top__column');
+
+		columns.forEach(column => {
+			const showMoreBlock = column.querySelector('[data-showmore]');
+			const customButton = column.querySelector('.main-reviews-showmore__button');
+
+			if (showMoreBlock && customButton) {
+				const isActive = showMoreBlock.classList.contains('_showmore-active');
+				column.classList.toggle('_showmore-open', isActive);
+
+				const arrow = customButton.querySelector('[data-showmore-button]');
+				if (arrow) {
+					arrow.style.transform = isActive ? 'rotate(180deg)' : 'rotate(0deg)';
 				}
 			}
 		});
 	}
+
+	document.addEventListener('DOMContentLoaded', function () {
+		syncInitialState();
+	});
+
+	const observer = new MutationObserver(function (mutations) {
+		mutations.forEach(function (mutation) {
+			if (mutation.addedNodes.length) {
+				syncInitialState();
+			}
+		});
+	});
+
+	document.addEventListener('DOMContentLoaded', function () {
+		observer.observe(document.body, {
+			childList: true,
+			subtree: true
+		});
+	});
 }
 //================================================================================================================================================================================================================================================================================================================
 // Прочие полезные функции ================================================================================================================================================================================================================================================================================================================
