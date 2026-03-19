@@ -616,25 +616,8 @@
             document.documentElement.classList.remove("menu-open");
         }
         function showMore() {
-            const showMoreButtons = document.querySelector("[data-showmore-buttons]");
-            if (showMoreButtons) {
-                const showMoreButton = document.querySelector("[data-showmore-button]");
-                const collapseButton = document.querySelector("[data-collapse-button]");
-                const productsLength = document.querySelectorAll("[data-showmore-content]").length;
-                const array = Array.from(document.querySelector("[data-showmore]").children);
-                const visItems = array.slice(0);
-                showMoreButton.addEventListener("click", (() => {
-                    visItems.forEach((el => el.classList.add("_active")));
-                    showMoreButtons.classList.add("_showmore-active");
-                }));
-                collapseButton.addEventListener("click", (function(e) {
-                    visItems.forEach((el => el.classList.remove("_active")));
-                    showMoreButtons.classList.remove("_showmore-active");
-                }));
-                if (productsLength <= 2) showMoreButtons.classList.add("_hidden");
-            }
-            const showMoreBlocks = document.querySelectorAll(".showmore");
-            if (showMoreBlocks) window.addEventListener("load", (function(e) {
+            window.addEventListener("load", (function(e) {
+                const showMoreBlocks = document.querySelectorAll("[data-showmore]");
                 let showMoreBlocksRegular;
                 let mdQueriesArray;
                 if (showMoreBlocks.length) {
@@ -670,9 +653,10 @@
                     let showMoreButton = showMoreBlock.querySelectorAll("[data-showmore-button]");
                     showMoreContent = Array.from(showMoreContent).filter((item => item.closest("[data-showmore]") === showMoreBlock))[0];
                     showMoreButton = Array.from(showMoreButton).filter((item => item.closest("[data-showmore]") === showMoreBlock))[0];
-                    const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+                    const customButton = showMoreBlock.querySelector(".main-reviews-showmore__button");
+                    const hiddenHeight = getHeight(showMoreBlock, showMoreContent, customButton);
                     if (matchMedia.matches || !matchMedia) if (hiddenHeight < getOriginalHeight(showMoreContent)) {
-                        _slideUp(showMoreContent, 0, hiddenHeight);
+                        _slideUp(showMoreContent, 0, showMoreBlock.classList.contains("_showmore-active") ? getOriginalHeight(showMoreContent) : hiddenHeight);
                         showMoreButton.hidden = false;
                     } else {
                         _slideDown(showMoreContent, 0, hiddenHeight);
@@ -682,17 +666,30 @@
                         showMoreButton.hidden = true;
                     }
                 }
-                function getHeight(showMoreBlock, showMoreContent) {
+                function getHeight(showMoreBlock, showMoreContent, customButton) {
                     let hiddenHeight = 0;
                     const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : "size";
+                    const rowGap = parseFloat(getComputedStyle(showMoreContent).rowGap) ? parseFloat(getComputedStyle(showMoreContent).rowGap) : 0;
+                    if (customButton && showMoreBlock.classList.contains("main-reviews-showmore")) {
+                        const buttonHeight = customButton.offsetHeight;
+                        const windowWidth = window.innerWidth;
+                        let extraPixels = 58;
+                        if (windowWidth <= 992) extraPixels = 70;
+                        hiddenHeight = buttonHeight + extraPixels;
+                        return hiddenHeight;
+                    }
                     if ("items" === showMoreType) {
                         const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 3;
                         const showMoreItems = showMoreContent.children;
                         for (let index = 1; index < showMoreItems.length; index++) {
                             const showMoreItem = showMoreItems[index - 1];
-                            hiddenHeight += showMoreItem.offsetHeight;
+                            const marginTop = parseFloat(getComputedStyle(showMoreItem).marginTop) ? parseFloat(getComputedStyle(showMoreItem).marginTop) : 0;
+                            const marginBottom = parseFloat(getComputedStyle(showMoreItem).marginBottom) ? parseFloat(getComputedStyle(showMoreItem).marginBottom) : 0;
+                            hiddenHeight += showMoreItem.offsetHeight + marginTop;
                             if (index == showMoreTypeValue) break;
+                            hiddenHeight += marginBottom;
                         }
+                        rowGap ? hiddenHeight += (showMoreTypeValue - 1) * rowGap : null;
                     } else {
                         const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 150;
                         hiddenHeight = showMoreTypeValue;
@@ -716,15 +713,55 @@
                     const targetEvent = e.target;
                     const targetType = e.type;
                     if ("click" === targetType) {
-                        if (targetEvent.closest("[data-showmore-button]")) {
-                            const showMoreButton = targetEvent.closest("[data-showmore-button]");
+                        const customButton = targetEvent.closest(".main-reviews-showmore__button");
+                        const dataButton = targetEvent.closest("[data-showmore-button]");
+                        if (customButton) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            const innerDataButton = customButton.querySelector("[data-showmore-button]");
+                            if (innerDataButton) {
+                                const showMoreBlock = innerDataButton.closest("[data-showmore]");
+                                if (showMoreBlock) {
+                                    const showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
+                                    const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : "500";
+                                    const hiddenHeight = getHeight(showMoreBlock, showMoreContent, customButton);
+                                    if (!showMoreContent.classList.contains("_slide")) {
+                                        if (!showMoreBlock.classList.contains("_showmore-active")) _slideDown(showMoreContent, showMoreSpeed, hiddenHeight); else _slideUp(showMoreContent, showMoreSpeed, hiddenHeight);
+                                        showMoreBlock.classList.toggle("_showmore-active");
+                                        const columnBlock = showMoreBlock.closest(".main-reviews-top__column");
+                                        if (columnBlock) {
+                                            const isActive = showMoreBlock.classList.contains("_showmore-active");
+                                            columnBlock.classList.toggle("_showmore-open", isActive);
+                                            if (customButton) {
+                                                const arrow = customButton.querySelector("[data-showmore-button]");
+                                                if (arrow) arrow.style.transform = isActive ? "rotate(180deg)" : "rotate(0deg)";
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            return;
+                        }
+                        if (dataButton && !targetEvent.closest(".main-reviews-showmore__button")) {
+                            const showMoreButton = dataButton;
                             const showMoreBlock = showMoreButton.closest("[data-showmore]");
                             const showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
                             const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : "500";
-                            const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+                            const customButton = showMoreBlock.querySelector(".main-reviews-showmore__button");
+                            const hiddenHeight = getHeight(showMoreBlock, showMoreContent, customButton);
                             if (!showMoreContent.classList.contains("_slide")) {
-                                showMoreBlock.classList.contains("_showmore-active") ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
+                                if (!showMoreBlock.classList.contains("_showmore-active")) _slideDown(showMoreContent, showMoreSpeed, hiddenHeight); else _slideUp(showMoreContent, showMoreSpeed, hiddenHeight);
                                 showMoreBlock.classList.toggle("_showmore-active");
+                                const columnBlock = showMoreBlock.closest(".main-reviews-top__column");
+                                if (columnBlock) {
+                                    const isActive = showMoreBlock.classList.contains("_showmore-active");
+                                    columnBlock.classList.toggle("_showmore-open", isActive);
+                                    const customBtn = columnBlock.querySelector(".main-reviews-showmore__button");
+                                    if (customBtn) {
+                                        const arrow = customBtn.querySelector("[data-showmore-button]");
+                                        if (arrow) arrow.style.transform = isActive ? "rotate(180deg)" : "rotate(0deg)";
+                                    }
+                                }
                             }
                         }
                     } else if ("resize" === targetType) {
@@ -732,6 +769,33 @@
                         mdQueriesArray && mdQueriesArray.length ? initItemsMedia(mdQueriesArray) : null;
                     }
                 }
+            }));
+            function syncInitialState() {
+                const columns = document.querySelectorAll(".main-reviews-top__column");
+                columns.forEach((column => {
+                    const showMoreBlock = column.querySelector("[data-showmore]");
+                    const customButton = column.querySelector(".main-reviews-showmore__button");
+                    if (showMoreBlock && customButton) {
+                        const isActive = showMoreBlock.classList.contains("_showmore-active");
+                        column.classList.toggle("_showmore-open", isActive);
+                        const arrow = customButton.querySelector("[data-showmore-button]");
+                        if (arrow) arrow.style.transform = isActive ? "rotate(180deg)" : "rotate(0deg)";
+                    }
+                }));
+            }
+            document.addEventListener("DOMContentLoaded", (function() {
+                syncInitialState();
+            }));
+            const observer = new MutationObserver((function(mutations) {
+                mutations.forEach((function(mutation) {
+                    if (mutation.addedNodes.length) syncInitialState();
+                }));
+            }));
+            document.addEventListener("DOMContentLoaded", (function() {
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
             }));
         }
         function FLS(message) {
