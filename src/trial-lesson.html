@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Пробный урок"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <div class="block-trial-lesson">
+                <div class="block-trial-lesson__container">
+                    <div class="block-trial-lesson__steps">
+                        <!--
+                        <div class="block-trial-lesson__step active">
+                            <div class="trial-lesson-main">
+                                <div class="trial-lesson-main__content">
+                                <div class="trial-lesson-main__body">
+                                    <div class="trial-lesson-main__top">
+                                    <h1 class="title1">
+                                        Добро<br> пожаловать в школу «Диалог»
+                                    </h1>
+                                    <h2 class="title2">Пробный урок</h2>
+                                    <button type="button" class="btn btn-next">
+                                        <span>Начать урок</span>
+                                        <span class="btn-icon"></span>
+                                    </button>
+                                </div>
+                                </div>
+                                <div class="trial-lesson-main__image">
+                                    <img src="img/trial-lesson/image1.png" alt="" class="trial-lesson-main__pic1">
+                                    <img src="img/trial-lesson/image2.png" alt="" class="trial-lesson-main__pic2">
+                                    <div class="trial-lesson-main__text">
+                                        <div class="trial-lesson-main__title">
+                                            Merhaba!
+                                        </div>
+                                        <p>
+                                            Ваш первый шаг в турецкий
+                                        </p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>-->
+                        <!--
+                        <div class="block-trial-lesson__step">
+                            <div class="trial-lesson-main trial-lesson-step2">
+                                <div class="trial-lesson-main__content">
+                                    <div class="trial-lesson-main__body">
+                                        <div class="trial-lesson-main__top ">
+                                            <div class="trial-lesson-time">
+                                                <img src="img/trial-lesson/time.svg" alt="">
+                                                <span>Пробный урок · 30 минут</span>
+                                            </div>
+                                            <h2 class="title1">
+                                                Что сегодня будет?
+                                            </h2>
+                                            <ul>
+                                                <li>
+                                                    <div class="icon-check _icon-check"></div>
+                                                    <p>
+                                                        Поговорим о ваших целях обучения
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <div class="icon-check _icon-check"></div>
+                                                    <p>
+                                                        Поговорим о турецком и на турецком
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <div class="icon-check _icon-check"></div>
+                                                    <p>
+                                                        Узнаем, каких результатов вы достигнете
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <div class="icon-check _icon-check"></div>
+                                                    <p>
+                                                        В конце урока получите приятный бонус
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="btn btn-next">
+                                                <span>Продолжить</span>
+                                                <span class="btn-icon"></span>
+                                            </button>
+                                        </div>
+                                        <div data-da=".trial-lesson-step2, 992, last"
+                                            class="trial-lesson-buttons">
+                                            <button type="button" class="btn btn-border btn-back disabled">
+                                                <span class="btn-icon-arrow _icon-arrow"></span>
+                                                <span>Назад</span>
+                                            </button>
+                                            <button type="button" class="btn btn-next btn-border">
+                                                <span>Далее</span>
+                                                <span class="btn-icon"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="trial-lesson-main__image">
+                                        <img src="img/trial-lesson/image3.png" alt="" class="trial-lesson-main__pic1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                        <!--
+                        <div class="block-trial-lesson__step">
+                            <div class="block-goal">
+                                <div class="block-goal__content">
+                                    <div class="block-goal__body">
+                                        <div class="trial-lesson-top">
+                                            <div class="trial-lesson-top__text">
+                                                Давайте познакомимся
+                                            </div>
+                                            <h2 class="title2">
+                                                Какая у вас цель изучения турецкого?
+                                            </h2>
+                                        </div>
+                                        <div class="block-goal__columns">
+                                            <div class="block-goal__column">
+                                                <div class="block-goal__title">
+                                                    🍵
+                                                    <span>Расскажите о своём опыте изучения языка</span>
+                                                </div>
+                                                <div class="options1">
+                                                    <label class="options1__item">
+                                                        <input hidden class="options1__input" checked type="radio"
+                                                            value="1" name="option1">
+                                                        <span class="options1__label">
+                                                            <span class="options1__text">Изучаю впервые</span>
+                                                        </span>
+                                                    </label>
+                                                    <label class="options1__item">
+                                                        <input hidden class="options1__input" type="radio" value="2"
+                                                            name="option1">
+                                                        <span class="options1__label">
+                                                            <span class="options1__text">Был небольшой опыт</span>
+                                                        </span>
+                                                    </label>
+                                                    <label class="options1__item">
+                                                        <input hidden class="options1__input" type="radio" value="3"
+                                                            name="option1">
+                                                        <span class="options1__label">
+                                                            <span class="options1__text">Уже знаю основы</span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="block-goal__column">
+                                                <div class="block-goal__title">
+                                                    🍵
+                                                    <span>Какая у вас цель изучения турецкого языка?</span>
+                                                </div>
+                                                <div class="options1">
+                                                    <label class="options1__item">
+                                                        <input hidden class="options1__input" checked type="radio"
+                                                            value="1" name="option2">
+                                                        <span class="options1__label">
+                                                            <span class="options1__text">Переехать в Турцию</span>
+                                                        </span>
+                                                    </label>
+                                                    <label class="options1__item">
+                                                        <input hidden class="options1__input" type="radio" value="2"
+                                                            name="option2">
+                                                        <span class="options1__label">
+                                                            <span class="options1__text">Работа и карьера</span>
+                                                        </span>
+                                                    </label>
+                                                    <label class="options1__item">
+                                                        <input hidden class="options1__input" type="radio" value="3"
+                                                            name="option2">
+                                                        <span class="options1__label">
+                                                            <span class="options1__text">Путешествия</span>
+                                                        </span>
+                                                    </label>
+                                                    <label class="options1__item">
+                                                        <input hidden class="options1__input" type="radio" value="4"
+                                                            name="option2">
+                                                        <span class="options1__label">
+                                                            <span class="options1__text">Общение с родственниками</span>
+                                                        </span>
+                                                    </label>
+                                                    <label class="options1__item">
+                                                        <input hidden class="options1__input" type="radio" value="5"
+                                                            name="option2">
+                                                        <span class="options1__label">
+                                                            <span class="options1__text">Культура и интерес</span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="block-goal__column">
+                                                <div class="block-goal__title">
+                                                    🍵
+                                                    <span>Когда вы готовы начать обучение?</span>
+                                                </div>
+                                                <div class="options1">
+                                                    <label class="options1__item">
+                                                        <input hidden class="options1__input" checked type="radio"
+                                                            value="1" name="option3">
+                                                        <span class="options1__label">
+                                                            <span class="options1__text">Готов(а) прямо сейчас</span>
+                                                        </span>
+                                                    </label>
+                                                    <label class="options1__item">
+                                                        <input hidden class="options1__input" type="radio" value="2"
+                                                            name="option3">
+                                                        <span class="options1__label">
+                                                            <span class="options1__text">В ближайший месяц</span>
+                                                        </span>
+                                                    </label>
+                                                    <label class="options1__item">
+                                                        <input hidden class="options1__input" type="radio" value="3"
+                                                            name="option3">
+                                                        <span class="options1__label">
+                                                            <span class="options1__text">Пока изучаю варианты</span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-goal__image">
+                                        <img src="img/trial-lesson/image4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="trial-lesson-buttons">
+                                    <button type="button" class="btn btn-border-black btn-back">
+                                        <span class="btn-icon-arrow _icon-arrow"></span>
+                                        <span>Назад</span>
+                                    </button>
+                                    <button type="button" class="btn btn-next">
+                                        <span>Далее</span>
+                                        <span class="btn-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>-->
+                        <!--
+                        <div class="block-trial-lesson__step">
+                            <div class="trial-lesson-about">
+                                <div class="trial-lesson-top">
+                                    <div class="trial-lesson-top__text">
+                                        Немного о школе
+                                    </div>
+                                    <h2 class="title2">
+                                        Школа «Диалог»
+                                    </h2>
+                                    <p>
+                                        20 лет — лидер на рынке обучения турецкому языку
+                                    </p>
+                                </div>
+                                <div class="trial-lesson-about__content">
+                                    <div class="about">
+                                        <div class="about__content">
+                                            <div class="about__body">
+                                                <div class="about__column">
+                                                    <div class="about__item">
+                                                        <div class="about__numbers">
+                                                            <div class="about__number">1000+</div>
+                                                        </div>
+                                                        <div class="about__text">
+                                                            Ежегодно у нас обучается более 1000 человек
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="about__column">
+                                                    <div class="about__item">
+                                                        <div class="about__numbers">
+                                                            <div class="about__number">2005</div>
+                                                        </div>
+                                                        <div class="about__text">
+                                                            Работаем с 2005 года, специализируемся только на турецком
+                                                            языке
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="about__column">
+                                                    <div class="about__item">
+                                                        <div class="about__numbers">
+                                                            <div class="about__number">30</div>
+                                                        </div>
+                                                        <div class="about__text">
+                                                            Более 30 преподавателей — носителей языка
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tax-deduction">
+                                        <div class="tax-deduction__content">
+                                            <div class="tax-deduction__body">
+                                                <div class="tax-deduction__top top-tax-deduction">
+                                                    <div class="top-tax-deduction__text">Налоговый вычет</div>
+                                                    <div class="top-tax-deduction__title">
+                                                        <span>Верните 13%</span> от стоимости обучения
+                                                    </div>
+                                                    <div class="top-tax-deduction__subtitle">
+                                                        Социальный налоговый вычет – это возврат части уплаченного
+                                                        налога.
+                                                    </div>
+                                                </div>
+                                                <div class="tax-deduction__bottom bottom-tax-deduction">
+                                                    <div class="bottom-tax-deduction__subtitle">
+                                                        Имеем лицензию министерства образования РФ и специализируемся
+                                                        только на преподавании
+                                                        турецкого языка и русского языка для турок.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tax-deduction__images">
+                                                <img loading="lazy" src="../img/trial-lesson/image5.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="trial-lesson-about__benefits">
+                                        <div class="trial-lesson-about__column">
+                                            <div class="trial-lesson-about__icon">
+                                                ✦
+                                            </div>
+                                            <p>
+                                                Всё, что мы делаем — <span>делаем с любовью</span>
+                                            </p>
+                                        </div>
+                                        <div class="trial-lesson-about__column">
+                                            <div class="trial-lesson-about__icon">
+                                                ✦
+                                            </div>
+                                            <p>
+                                                <span>Дружное</span> виртуальное сообщество
+                                            </p>
+                                        </div>
+                                        <div class="trial-lesson-about__column">
+                                            <div class="trial-lesson-about__icon">
+                                                ✦
+                                            </div>
+                                            <p>
+                                                Школа <span>20 лет</span> лидер на рынке образования
+                                            </p>
+                                        </div>
+                                        <div class="trial-lesson-about__column">
+                                            <div class="trial-lesson-about__icon">
+                                                ✦
+                                            </div>
+                                            <p>
+                                                <span>Форматы обучения:</span> индивидуально или в группе
+                                            </p>
+                                        </div>
+                                        <div class="trial-lesson-about__column">
+                                            <div class="trial-lesson-about__icon">
+                                                ✦
+                                            </div>
+                                            <p>
+                                                Уроки и домашние задания — на платформе <span>онлайн</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="trial-lesson-buttons">
+                                    <button type="button" class="btn btn-border-black btn-back">
+                                        <span class="btn-icon-arrow _icon-arrow"></span>
+                                        <span>Назад</span>
+                                    </button>
+                                    <button type="button" class="btn btn-next">
+                                        <span>Далее</span>
+                                        <span class="btn-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>-->
+                        <!--
+                        <div class="block-trial-lesson__step bg-step">
+                            <div class="trial-lesson-blue trial-lesson-blue1">
+                                <div class="trial-lesson-blue__content">
+                                    <div class="trial-lesson-blue__body">
+                                        <div class="trial-lesson-time">
+                                            <img src="img/trial-lesson/time.svg" alt="">
+                                            <span>Поехали</span>
+                                        </div>
+                                        <div class="trial-lesson-blue__center">
+                                            <h2 class="title2">
+                                                Первые шаги в турецком
+                                            </h2>
+                                            <p>
+                                                Дальше — только практика. Вы сразу начнёте читать и говорить.
+                                            </p>
+                                        </div>
+                                        <div data-da=".trial-lesson-blue1, 992, last" class="trial-lesson-buttons">
+                                            <button type="button" class="btn btn-back btn-border-white disabled">
+                                                <span class="btn-icon-arrow _icon-arrow"></span>
+                                                <span>Назад</span>
+                                            </button>
+                                            <button type="button" class="btn btn-next btn-border">
+                                                <span>Далее</span>
+                                                <span class="btn-icon"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="trial-lesson-blue__image">
+                                        <img src="img/trial-lesson/image6.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                        <!--
+                        <div class="block-trial-lesson__step">
+                            <div class="trial-lesson-alphabet">
+                                <div class="trial-lesson-alphabet__content">
+                                    <div class="trial-lesson-top">
+                                        <div class="trial-lesson-top__text">
+                                            Простое объяснение
+                                        </div>
+                                        <h2 class="title2">
+                                            Как пишем, так и читаем
+                                        </h2>
+                                    </div>
+                                    <div class="trial-lesson-alphabet__body">
+                                        <div class="trial-lesson-alphabet__title">
+                                            Турецкий алфавит
+                                        </div>
+                                        <div class="trial-lesson-alphabet__letters">
+                                            <div style="color:#E6514A" class="trial-lesson-alphabet__letter">
+                                                Aa
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Bb
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Cc
+                                            </div>
+                                            <div style="color: #3035C3" class="trial-lesson-alphabet__letter">
+                                                Çç
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Dd
+                                            </div>
+                                            <div style="color:#E6514A" class="trial-lesson-alphabet__letter">
+                                                Ee
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Ff
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Gg
+                                            </div>
+                                            <div style="color: #3035C3" class="trial-lesson-alphabet__letter">
+                                                Ğğ
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Hh
+                                            </div>
+                                            <div style="color: #3035C3" class="trial-lesson-alphabet__letter">
+                                                Iı
+                                            </div>
+                                            <div style="color:#E6514A" class="trial-lesson-alphabet__letter">
+                                                İi
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Jj
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Kk
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Ll
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Mm
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Nn
+                                            </div>
+                                            <div style="color:#E6514A" class="trial-lesson-alphabet__letter">
+                                                Oo
+                                            </div>
+                                            <div style="color: #3035C3" class="trial-lesson-alphabet__letter">
+                                                Öö
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Pp
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Rr
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Ss
+                                            </div>
+                                            <div style="color: #3035C3" class="trial-lesson-alphabet__letter">
+                                                Şş
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Tt
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Uu
+                                            </div>
+                                            <div style="color: #3035C3" class="trial-lesson-alphabet__letter">
+                                                Üü
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Vv
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Yy
+                                            </div>
+                                            <div class="trial-lesson-alphabet__letter">
+                                                Zz
+                                            </div>
+                                        </div>
+                                        <div class="trial-lesson-alphabet__hints">
+                                            <div style="color:#E6514A" class="trial-lesson-alphabet__hint">
+                                                <div style="background-color:#E6514A"
+                                                    class="trial-lesson-alphabet__circle"></div>
+                                                <span>Особые гласные</span>
+                                            </div>
+                                            <div style="color:#3035C3" class="trial-lesson-alphabet__hint">
+                                                <div style="background-color:#3035C3"
+                                                    class="trial-lesson-alphabet__circle"></div>
+                                                <span>Уникальные турецкие буквы</span>
+                                            </div>
+                                            <div style="color:#6A7282" class="trial-lesson-alphabet__hint">
+                                                <div style="background-color:#6A7282"
+                                                    class="trial-lesson-alphabet__circle"></div>
+                                                <span>Как в латинском</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="trial-lesson-buttons">
+                                    <button type="button" class="btn btn-back btn-border-black">
+                                        <span class="btn-icon-arrow _icon-arrow"></span>
+                                        <span>Назад</span>
+                                    </button>
+                                    <button type="button" class="btn btn-next">
+                                        <span>Далее</span>
+                                        <span class="btn-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="block-trial-lesson__step">
+                            <div class="trial-lesson-read">
+                                <div class="trial-lesson-read__content">
+                                    <div class="trial-lesson-top">
+                                        <div class="trial-lesson-top__title">
+                                            КАК ПИШЕМ, ТАК И ЧИТАЕМ
+                                        </div>
+                                        <h2 class="title2">
+                                            Читаем на турецком языке
+                                        </h2>
+                                    </div>
+                                    <div class="trial-lesson-read__body">
+                                        <div class="trial-lesson-read__column">
+                                            <div class="trial-lesson-read__title">
+                                                Все буквы как пишутся, так и читаются:
+                                            </div>
+                                            <div class="trial-lesson-read__items">
+                                                <div class="trial-lesson-read__item item-green">
+                                                    MASA
+                                                </div>
+                                                <div class="trial-lesson-read__item item-green">
+                                                    KİTAP
+                                                </div>
+                                                <div class="trial-lesson-read__item item-green">
+                                                    ARABA
+                                                </div>
+                                                <div class="trial-lesson-read__item item-green">
+                                                    BARDAK
+                                                </div>
+                                                <div class="trial-lesson-read__item item-green">
+                                                    OKUL
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="trial-lesson-read__column">
+                                            <div class="trial-lesson-read__title">
+                                                <span>Исключение</span> — буква Ğğ (yumuşak g): она удлиняет гласный
+                                                перед ней:
+                                            </div>
+                                            <div class="trial-lesson-read__items">
+                                                <div class="trial-lesson-read__item item-red">
+                                                    SOĞUK
+                                                </div>
+                                                <div class="trial-lesson-read__item item-red">
+                                                    BOĞA
+                                                </div>
+                                                <div class="trial-lesson-read__item item-red">
+                                                    DAĞ
+                                                </div>
+                                                <div class="trial-lesson-read__item item-red">
+                                                    ÖĞRETMEN
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="trial-lesson-read__column">
+                                            <div class="trial-lesson-read__title">
+                                                Ударение обычно падает на последний слог:
+                                            </div>
+                                            <div class="trial-lesson-read__items">
+                                                <div class="trial-lesson-read__item item-white">
+                                                    O<span>DA</span>
+                                                </div>
+                                                <div class="trial-lesson-read__item item-white">
+                                                    A<span>DAM</span>
+                                                </div>
+                                                <div class="trial-lesson-read__item item-white">
+                                                    GÖKTÜR<span>K</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="trial-lesson-buttons">
+                                    <button type="button" class="btn btn-back btn-border-black">
+                                        <span class="btn-icon-arrow _icon-arrow"></span>
+                                        <span>Назад</span>
+                                    </button>
+                                    <button type="button" class="btn btn-next">
+                                        <span>Далее</span>
+                                        <span class="btn-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="block-trial-lesson__step bg-step">
+                            <div class="trial-lesson-blue trial-lesson-blue2">
+                                <div class="trial-lesson-blue__content">
+                                    <div class="trial-lesson-blue__body">
+                                        <div class="trial-lesson-blue__center">
+                                            <h2 class="title2">
+                                                ВЫ НА СТАРТЕ!
+                                            </h2>
+                                            <button type="button" class="btn btn-next btn-border-white">
+                                                <span>Продолжить →</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="trial-lesson-blue__image">
+                                        <img src="img/trial-lesson/image7.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
