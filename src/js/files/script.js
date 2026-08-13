@@ -150,3 +150,53 @@ if (selectWrapper) {
         filterReviews(initialSelect.value);
     }
 }
+
+//========================================================================================================================================================
+
+const trialLessonSteps = document.querySelectorAll('.block-trial-lesson__step');
+if (trialLessonSteps) {
+    const nextButtons = document.querySelectorAll('.block-trial-lesson__step .btn-next');
+    const backButtons = document.querySelectorAll('.block-trial-lesson__step .btn-back');
+
+    let currentStep = 0;
+
+    function updateSteps(index) {
+        trialLessonSteps.forEach(step => {
+            step.classList.remove('active');
+        });
+
+        if (trialLessonSteps[index]) {
+            trialLessonSteps[index].classList.add('active');
+        }
+
+        backButtons.forEach(btn => {
+            if (index === 0) {
+                btn.classList.add('disabled');
+            } else {
+                btn.classList.remove('disabled');
+            }
+        });
+    }
+
+    nextButtons.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (currentStep < trialLessonSteps.length - 1) {
+                currentStep++;
+                updateSteps(currentStep);
+            }
+        });
+    });
+
+    backButtons.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (!this.classList.contains('disabled') && currentStep > 0) {
+                currentStep--;
+                updateSteps(currentStep);
+            }
+        });
+    });
+
+    updateSteps(0);
+}
